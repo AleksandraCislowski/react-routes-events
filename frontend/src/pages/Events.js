@@ -5,7 +5,6 @@ function EventsPage() {
   const data = useLoaderData();
 
   const events = data.events;
-  console.log(events);
 
   return <EventsList events={events} />;
 }
