@@ -84,7 +84,6 @@ function EventForm({ method, event }) {
 export default EventForm;
 
 export async function action({ request, params }) {
-  console.log(request);
   const method = request.method;
   const data = await request.formData();
 
@@ -95,20 +94,19 @@ export async function action({ request, params }) {
     description: data.get("description"),
   };
 
-  console.log("2");
   let url = "http://localhost:8080/events";
 
   if (method === "PATCH") {
     const eventId = params.eventId;
     url = "http://localhost:8080/events/" + eventId;
   }
-  console.log("3");
+
   const response = await fetch(url, {
     method: method,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(eventData),
   });
-  console.log("4");
+
   if (response.status === 422) {
     return response;
   }
