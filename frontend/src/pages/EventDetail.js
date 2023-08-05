@@ -2,8 +2,8 @@ import {
   useRouteLoaderData,
   json,
   redirect,
-  defer,
   Await,
+  defer,
 } from "react-router-dom";
 import EventItem from "../components/EventItem";
 import EventsList from "../components/EventsList";
@@ -21,7 +21,7 @@ const EventDetailPage = () => {
       </Suspense>
       <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
         <Await resolve={events}>
-          {(loadedEvents) => <EventsList event={loadedEvents} />}
+          {(loadedEvents) => <EventsList events={loadedEvents} />}
         </Await>
       </Suspense>
     </>
