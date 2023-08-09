@@ -1,6 +1,6 @@
 # Routes events app.
 
-This project is a single page application where you have displayed a list of random events near you. It has a whole authentication proccess, where you can create a new user, or log in if you are an existing one. The app uses a 1h duration token, which will keep you logged in, until the time will passed or you will log out. When you are logged in, you can add new event to the existing list, edit it or delete. There is also a page for a newsletter. The whole idea behind this project was to learn more about react-router and how to build a SPA.
+This project is a single page application where you have displayed a list of random events near you. It has a whole authentication proccess, where you can create a new user or log in if you are an existing one. The app uses a 1h duration token, which will keep you logged in, until the time will passed or you will log out. When you are logged in, you can add new event to the existing list, edit it or delete. There is also a page for a newsletter. The whole idea behind this project was to learn more about react-router and how to build a SPA.
 
 ## What you can do here?
 
